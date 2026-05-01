@@ -204,7 +204,7 @@ lms-system/
 ## 👨‍💻 Author
 
 **Ritik Raushan**  
-📧 ritik@lpu.in  
+📧 ritikravi7724@gmail.com  
 🔗 [GitHub](https://github.com/ritikravi)
 
 ---

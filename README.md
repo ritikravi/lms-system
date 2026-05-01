@@ -2,7 +2,7 @@
 
 A full-stack **Library Management System** built with the **MERN Stack** (MongoDB, Express, React, Node.js) — inspired by LPU's central library portal.
 
-🌐 **Live Demo:** [Coming Soon — Vercel]  
+🌐 **Live Demo:** https://lms-system-rose.vercel.app  
 🔧 **Backend API:** https://lms-system-wvid.onrender.com/api/health
 
 ---

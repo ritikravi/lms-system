@@ -29,9 +29,18 @@ const { calculateDailyFines } = require('./utils/cronJobs');
 app.use(helmet());
 app.use(cors({
   origin: function(origin, callback) {
-    // Allow requests with no origin (mobile apps, curl, etc.)
-    if (!origin) return callback(null, true);
-    return callback(null, true);
+    const allowed = [
+      'http://localhost:5173',
+      'https://lms-system.vercel.app',
+      'https://lms-system-ritikravi.vercel.app',
+      process.env.CLIENT_URL,
+    ].filter(Boolean);
+    if (!origin || allowed.some(o => origin.startsWith(o.replace('*', '')))) {
+      return callback(null, true);
+    }
+    // Allow all vercel preview URLs
+    if (origin.includes('vercel.app')) return callback(null, true);
+    return callback(null, true); // allow all for now
   },
   credentials: true,
 }));
